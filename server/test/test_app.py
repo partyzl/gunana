@@ -23,6 +23,9 @@ def test_api_post_puns(api):
 
 
 def test_api_not_found(api):
-    res = api.get("/bob")
-    assert res.status == "404 NOT FOUND"
+    res = api.get("/asdf")
+    assert (
+        res.status
+        == "<h1>Dont fruit the messenger, but this doesn't exist! 🔫</h1>"
+    )
     assert "Oops!" in res.json["message"]
