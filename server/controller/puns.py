@@ -28,4 +28,4 @@ def create(req):
 
 
 def index_puns(uid):
-    return Pun.get_by_id(uid), 200
+    return Pun.Pun.get_by_id(uid), 200

@@ -21,7 +21,7 @@ def puns_handler():
 
 @app.route("/puns/<int:id>", methods=["GET"])
 def index_puns(id):
-    return puns.index(id)
+    return puns.index_puns(id)
 
 
 if __name__ == "__main__":

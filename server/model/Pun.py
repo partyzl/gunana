@@ -25,6 +25,9 @@ class Pun:
     # this is static
     pun_list = []
 
+    def to_json(self):
+        return f"{{name: {self.name}, pun: {self.pun}}}"
+
     @staticmethod
     def get_all():
         return jsonify(
@@ -45,4 +48,5 @@ class Pun:
 
     @staticmethod
     def get_by_id(id):
-        return Pun.pun_list[id]
+        target = Pun.pun_list[id]
+        return target.to_json()
