@@ -31,10 +31,7 @@ class Pun:
     @staticmethod
     def get_all():
         return jsonify(
-            [
-                f"{{'name': {pun.name}, 'pun': {pun.pun}}}"
-                for pun in Pun.pun_list
-            ]
+            [f"{{name: {pun.name}, pun: {pun.pun}}}" for pun in Pun.pun_list]
         )
 
     @staticmethod
