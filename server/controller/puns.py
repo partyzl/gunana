@@ -1,5 +1,4 @@
 from model import Pun
-from werkzeug import exceptions
 
 puns = [
     {"id": 1, "name": "Owen", "pun": "We’re raisin the roof!"},
