@@ -8,9 +8,13 @@ flask = "*"
 flask-cors = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-cov = "*"
 
 [scripts]
-dev = "bash -c \"export FLASK_ENV='development' && python server/app.py\""
+dev = "bash -c \"export FLASK_ENV='development' && python app.py\""
+test = "pytest ."
+coverage = "pytest --cov-report term-missing --cov=."
 
 [requires]
 python_version = "3.9"
