@@ -16,7 +16,7 @@ puns = [
 
 
 def show(request):
-    return (Pun.Pun.pun_list), 200
+    return Pun.Pun.get_all(), 200
 
 
 def create(req):

@@ -26,4 +26,5 @@ def index_puns(id):
 
 if __name__ == "__main__":
     Pun.Pun.load()
+    print(Pun.Pun.pun_list)
     app.run(debug=True)

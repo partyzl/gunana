@@ -1,3 +1,6 @@
+from flask import jsonify
+
+
 puns = [
     {"id": 1, "name": "Owen", "pun": "We’re raisin the roof!"},
     {"id": 2, "name": "Abi", "pun": "Orange you glad to see me?"},
@@ -21,6 +24,15 @@ class Pun:
 
     # this is static
     pun_list = []
+
+    @staticmethod
+    def get_all():
+        return jsonify(
+            [
+                f"{{'name': {pun.name}, 'pun': {pun.pun}}}"
+                for pun in Pun.pun_list
+            ]
+        )
 
     @staticmethod
     def add(name, pun):
