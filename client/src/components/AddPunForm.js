@@ -7,10 +7,10 @@ import { default as formSubmitHandler } from "../formSubmitHandler";
 </div> */
 }
 
-const AddPunForm = ({ setPuns }) => {
+const AddPunForm = ({ setPuns, setFormExpanded }) => {
   return (
     <div class="mb-3">
-      <form name="add-pun-form" onSubmit={(e) => formSubmitHandler(e, setPuns)}>
+      <form name="add-pun-form" onSubmit={(e) => formSubmitHandler(e, setPuns, setFormExpanded)}>
         <div class="pb-3">
           <label class="form-label" htmlFor="name">
             Name

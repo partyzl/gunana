@@ -1,4 +1,4 @@
-const formSubmitHandler = async (e, setPuns) => {
+const formSubmitHandler = async (e, setPuns, setFormExpanded) => {
     console.log('formSubmitHandler called!')
    e.preventDefault();
     const url = 'http://localhost:5000/puns';
@@ -16,6 +16,7 @@ const formSubmitHandler = async (e, setPuns) => {
     const all = await fetch(url)
     const puns = await all.json()
     setPuns(puns)
+    setFormExpanded(false)
 }
 
 export default formSubmitHandler;
