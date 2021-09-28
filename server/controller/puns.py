@@ -23,7 +23,7 @@ def create(req):
     new_pun = req.get_json()
     name = new_pun["name"]
     pun = new_pun["pun"]
-    Pun.add(name, pun)
+    Pun.Pun.add(name, pun)
     return new_pun, 201
 
 
