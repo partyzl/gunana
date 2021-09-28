@@ -10,7 +10,7 @@ flask-cors = "*"
 [dev-packages]
 
 [scripts]
-dev = "bash -c \"export FLASK_ENV='development' && flask run\""
+dev = "bash -c \"export FLASK_ENV='development' && python server/app.py\""
 
 [requires]
 python_version = "3.9"

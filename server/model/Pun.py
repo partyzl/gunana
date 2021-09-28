@@ -9,16 +9,14 @@ class Pun:
     pun_list = []
 
     @staticmethod
-    def add(len(pun_list), name, pun):
-        pun_list.push(Pun(name, pun))
+    def add(name, pun):
+        Pun.pun_list.push(Pun(len(Pun.pun_list), name, pun))
 
     @staticmethod
-    def load(pun_list):
-        for pun in pun_list:
-            punlist.push(Pun(len(pun_list), pun.name, pun.pun))
+    def load():
+        for pun in Pun.pun_list:
+            Pun.pun_list.push(Pun(len(Pun.pun_list), pun.name, pun.pun))
 
+    @staticmethod
     def get_by_id(id):
-        return pun_list[id]
-
-
-
+        return Pun.pun_list[id]

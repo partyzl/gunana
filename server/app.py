@@ -1,7 +1,8 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request
 from flask_cors import CORS
-from werkzeug import exceptions
-from puns import puns
+from controller import puns
+from model import Pun
+
 
 app = Flask(__name__)
 CORS(app)
@@ -24,4 +25,5 @@ def index_puns(id):
 
 
 if __name__ == "__main__":
+    Pun.Pun.load()
     app.run(debug=True)
