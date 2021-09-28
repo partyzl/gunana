@@ -4,9 +4,8 @@ const PunCardList = ({puns}) => {
     return (
         <ul>
             {
-                puns.map(pun => {
-                    return <PunCard pun={pun}/>
-                })
+                puns.length > 0 ? puns.map(pun => {
+                    return <PunCard pun={pun}/> }) : null
             }
         </ul>
     )
