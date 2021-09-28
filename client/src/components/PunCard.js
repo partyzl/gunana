@@ -1,9 +1,9 @@
 const PunCard = ({pun}) => {
+    const data = JSON.parse(pun)
     return (
         <div className='card'>
-        <p>{pun}</p>
-            <h3>{pun.pun}</h3>
-            <p>{pun.name}</p>
+            <h3>{data.pun}</h3>
+            <p>{data.name}</p>
         </div>
     )
 }

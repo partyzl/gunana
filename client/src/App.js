@@ -9,9 +9,6 @@ function App() {
   const [isFormExpanded, setFormExpanded] = useState(false);
   const [puns, setPuns] = useState([]);
 
-    const [isFormExpanded, setFormExpanded] = useState(false)
-    const [puns, setPuns] = useState([])
-
     useEffect(async () => {
         const url = 'http://localhost:5000/puns'
         const resp = await fetch(url)

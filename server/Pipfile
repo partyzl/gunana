@@ -13,8 +13,11 @@ pytest-cov = "*"
 
 [scripts]
 dev = "bash -c \"export FLASK_ENV='development' && python app.py\""
+<<<<<<< Updated upstream
 test = "pytest ."
 coverage = "pytest --cov-report term-missing --cov=."
+=======
+>>>>>>> Stashed changes
 
 [requires]
 python_version = "3.9"
