@@ -1,11 +1,22 @@
 const formSubmitHandler = async (e, setPuns) => {
-   e.preventDefault()
-    // http://localhost:5000/puns
-    // data = { method post, e.values ... w/e }
-    // await fetch(url, data)
-    // then get
-    // resp = await fetch(url)
-    // then setPuns resp
-    // return
+    console.log('formSubmitHandler called!')
+   e.preventDefault();
+    const url = 'http://localhost:5000/puns';
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            name: e.target.name.value,
+            pun: e.target.pun.value
+        })
+    }
+    const resp = await fetch(url, options)
+    const all = await fetch(url)
+    const puns = await all.json()
+    setPuns(puns)
 }
+
+export default formSubmitHandler;
 

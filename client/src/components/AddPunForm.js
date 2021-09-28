@@ -1,15 +1,15 @@
-import { formSubmitHandler } from '../formSubmitHandler'
+import { default as formSubmitHandler } from '../formSubmitHandler'
 
-const AddPunForm = ({formSubmitHandler}) => {
+const AddPunForm = ({setPuns}) => {
     return (
-        <form name="add-pun-form" onSubmit={formSubmitHandler} className="form">
+        <form name="add-pun-form" onSubmit={e => formSubmitHandler(e, setPuns)} className="form">
         <div>
-            <label htmlFor="input-name">name</label>
-            <input id="input-name"/>
+            <label htmlFor="name">name</label>
+            <input id="name"/>
         </div>
         <div>
-            <label htmlFor="input-pun">pun</label>
-            <input id="input-pun"/>
+            <label htmlFor="pun">pun</label>
+            <input id="pun"/>
         </div>
             <input className="btn btn-success" type="submit"/>
         </form>

@@ -12,15 +12,21 @@ function App() {
     useEffect(async () => {
         const url = 'http://localhost:5000/puns'
         const resp = await fetch(url)
+        const json = await resp.json()
+        console.log(json)
         // assume resp is fine
-        setPuns(resp.puns)
+        setPuns(json)
     }, [])
+
+    useEffect(async () => {
+        console.log('puns changed', puns)
+    }, [puns])
 
   return (
     <div className="App">
       <header className="App-header">
         { isFormExpanded ?
-        <AddPunForm setFormExpanded={setFormExpanded}/> :
+        <AddPunForm setFormExpanded={setFormExpanded} setPuns={setPuns}/> :
         <AddPunButton setFormExpanded={setFormExpanded}/> }
       </header>
       <main>
