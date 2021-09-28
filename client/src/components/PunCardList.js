@@ -1,3 +1,5 @@
+import { default as PunCard } from './PunCard'
+
 const PunCardList = ({puns}) => {
     return (
         <ul>
