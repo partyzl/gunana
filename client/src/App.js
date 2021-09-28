@@ -1,23 +1,29 @@
+import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import { AddPunButton, AddPunForm, PunCardList } from './Components';
+
 function App() {
+
+    const [isFormExpanded, setFormExpanded] = useState(false)
+    const [puns, setPuns] = useState([])
+
+    useEffect(async => {
+        // resp = await fetch('')
+        // setPuns(resp.puns)
+    }, [])
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        { isFormExpanded ?
+        <AddPunButton setFormExpanded={setFormExpanded}/> :
+        <AddPunForm setFormExpanded={setFormExpanded}/> }
       </header>
+      <main>
+        <PunCardList puns={puns}/>
+      </main>
     </div>
   );
 }
