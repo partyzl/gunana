@@ -1,11 +1,22 @@
-from flask import jsonify
 from model import Pun
 from werkzeug import exceptions
-import data
+
+puns = [
+    {"id": 1, "name": "Owen", "pun": "We’re raisin the roof!"},
+    {"id": 2, "name": "Abi", "pun": "Orange you glad to see me?"},
+    {
+        "id": 3,
+        "name": "Simon",
+        "pun": "I sat down be cider and we talked for hours.",
+    },
+    {"id": 4, "name": "Harris", "pun": "Well, it takes two to mango."},
+    {"id": 5, "name": "Tobi", "pun": "Honey, dew or dew not, there is no try."},
+    {"id": 6, "name": "Kenneth", "pun": "You hold the kiwi to my heart"},
+]
 
 
-def show():
-    return jsonify(Pun.pun_list), 200
+def show(request):
+    return (Pun.Pun.pun_list), 200
 
 
 def create(req):
