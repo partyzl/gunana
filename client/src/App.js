@@ -28,17 +28,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-<<<<<<< HEAD
-        {isFormExpanded ? (
-          <AddPunForm setFormExpanded={setFormExpanded} />
-        ) : (
-          <AddPunButton setFormExpanded={setFormExpanded} />
-        )}
-=======
         { isFormExpanded ?
         <AddPunForm setFormExpanded={setFormExpanded} setPuns={setPuns}/> :
         <AddPunButton setFormExpanded={setFormExpanded}/> }
->>>>>>> 43179efeb67402db3086a184a3b95013353f8f84
       </header>
       <main>
         <PunCardList puns={puns} />
